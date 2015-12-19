@@ -31,6 +31,7 @@ else
 <!DOCTYPE html>
 <html>
 <head>
+    <jdoc:include type="head" />
 </head>
 <body>
     <div id="page-wrapper">

@@ -26,7 +26,7 @@ $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/common.j
 
 $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/style.css');
 
-JHtml::_('bootstrap.loadCss', true, $this->direction);
+JHtml::_('bootstrap.loadCss', false, $this->direction);
 
 if ($this->params->get('logoFile'))
 {
@@ -56,7 +56,7 @@ else
             <div id="contacts"><jdoc:include type="modules" name="position-1" style="none" /></div>
         </div>
         <div id="top-menu"><jdoc:include type="modules" name="position-2" style="none" /></div>
-        <div id="breadcrumbs"><jdoc:include type="modules" name="position-8" style="none" /></div>
+        <!--<div id="breadcrumbs"><jdoc:include type="modules" name="position-8" style="none" /></div>-->
         <div id="content-wrapper">
             <div id="content">
                 <div id="workarea-wrapper">
@@ -84,7 +84,7 @@ else
         <div id="copyright"><jdoc:include type="modules" name="position-6" style="none" /></div>
         <div id="bottom-menu"><jdoc:include type="modules" name="position-7" style="none" /></div>
     </div>
-    <jdoc:include type="modules" name="debug" style="none" />
+    <!--<jdoc:include type="modules" name="debug" style="none" />-->
 </body>
 </html>
 

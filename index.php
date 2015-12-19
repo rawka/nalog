@@ -56,11 +56,14 @@ else
             <div id="contacts"><jdoc:include type="modules" name="position-1" style="none" /></div>
         </div>
         <div id="top-menu"><jdoc:include type="modules" name="position-2" style="none" /></div>
+        <div id="breadcrumbs"><jdoc:include type="modules" name="position-8" style="none" /></div>
         <div id="content-wrapper">
             <div id="content">
                 <div id="workarea-wrapper">
                     <div id="left-menu"><jdoc:include type="modules" name="position-3" style="none" /></div>
-                    <div id="banner"><jdoc:include type="modules" name="position-4" style="none" /></div>
+                    <?php if ($this->countModules('position-4')) : ?>
+                        <div id="banner"><jdoc:include type="modules" name="position-4" style="none" /></div>
+                    <?php endif; ?>
                     <div id="workarea">
                         <div id="workarea-inner">
                             <jdoc:include type="message" />
@@ -69,9 +72,11 @@ else
                     </div>
                 </div>
             </div>
-            <div id="sidebar">
-                <div id="sidebar-inner"><jdoc:include type="modules" name="position-5" style="none" /></div>
-            </div>
+            <?php if ($this->countModules('position-5')) : ?>
+                <div id="sidebar">
+                    <div id="sidebar-inner"><jdoc:include type="modules" name="position-5" style="none" /></div>
+                </div>
+            <?php endif; ?>
         </div>
         <div id="space-for-footer"></div>
     </div>

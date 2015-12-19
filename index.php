@@ -6,6 +6,26 @@
 
 defined('_JEXEC') or die;
 
+JHtml::_('bootstrap.framework');
+$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/common.js');
+
+$doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/style.css');
+
+JHtml::_('bootstrap.loadCss', false, $this->direction);
+
+if ($this->params->get('logoFile'))
+{
+	$logo = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
+}
+elseif ($this->params->get('sitetitle'))
+{
+	$logo = '<span class="site-title" title="' . $sitename . '">' . htmlspecialchars($this->params->get('sitetitle')) . '</span>';
+}
+else
+{
+	$logo = '<span class="site-title" title="' . $sitename . '">' . $sitename . '</span>';
+}
+
 ?>
 
 <!DOCTYPE html>
